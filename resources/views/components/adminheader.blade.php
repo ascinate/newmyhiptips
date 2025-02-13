@@ -434,7 +434,7 @@
 
           <a class="navbar-brand brand-logo" href="{{ URL::to('admin/dashboard') }}">
 
-            <img src="{{ asset('images/main_logo.png') }}" alt="logo" />
+            <img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo" />
 
         </a>
 

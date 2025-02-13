@@ -1,5 +1,6 @@
-<!-- Sidebar -->
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<div class="container-fluid page-body-wrapper">
+    <!-- partial:../../partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <!-- Profile Section -->
         <li class="nav-item nav-profile">
@@ -34,7 +35,7 @@
             <div class="collapse" id="manageModules">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="#"> Manage Hotels </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Manage Employees </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.employees') }}"> Manage Employees </a></li>
                     <li class="nav-item"> <a class="nav-link" href="#"> Manage Corporate Login </a></li>
                 </ul>
             </div>
@@ -56,4 +57,3 @@
         </li>
     </ul>
 </nav>
-<!-- End Sidebar -->
