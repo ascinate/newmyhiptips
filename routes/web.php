@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Employees;
+use App\Http\Controllers\EmployeesController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,11 +13,13 @@ Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('adm
 Route::post('/admin/login', [AdminController::class, 'login']);
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-Route::get('admin/employees',[Employees::class, 'index'])->name('admin.employees');
+Route::get('admin/employees',[EmployeesController::class, 'index'])->name('admin.employees');
 
-Route::get('employees/add', [Employees::class, 'add'])->name('admin.employees.add');
-// Route::post('employees/insert', [Employees::class, 'insertEmployee'])->name('admin.employees.insert');
-// Route::get('employees/{id}/edit', [Employees::class, 'edit'])->name('admin.employees.edit');
-// Route::post('employees/{id}/update', [Employees::class, 'updateEmployee'])->name('admin.employees.update');
-// Route::get('employees/{id}/view', [Employees::class, 'view'])->name('admin.employees.view');
-// Route::get('employees/{id}/delete', [Employees::class, 'delete'])->name('admin.employees.delete');
+Route::get('employees/add', [EmployeesController::class, 'add'])->name('admin.employees.add');
+Route::post('employees/insert', [EmployeesController::class, 'insertEmployee'])->name('admin.employees.insert');
+Route::get('/admin/employees/view/{id}', [EmployeesController::class, 'viewEmployee']);
+Route::get('admin/employees/edit/{id}', [EmployeesController::class, 'edit'])->name('admin.employees.edit');
+Route::post('admin/employees/update_employee', [EmployeesController::class, 'update_employee'])->name('admin.employees.update');
+Route::get('admin/employees/delete/{id}', [EmployeesController::class, 'delete']);
+
+

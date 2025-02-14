@@ -84,3 +84,13 @@
     </div>
 </div>
 <x-adminfooter/>
+
+<script type="text/javascript">
+    function archive(employeeId) {
+        
+        if (confirm("Are you sure you want to delete this employee?")) {
+        
+            window.location.href = "{{ url('admin/employees/delete') }}/" + employeeId;
+        }
+    }
+</script>
