@@ -111,7 +111,7 @@
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Latest Users</h4>
+                  <h4 class="card-title">Recent Tips</h4>
                     <table id="extable_dashboard" class="table table-striped dt-responsive nowrap">
                             <thead>
                                 <tr>

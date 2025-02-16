@@ -5,11 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Admin;
+// use App\Models\Admin;
 
 
 class AdminController extends Controller
 {
+
+    public function adminlogin()
+    {
+        return redirect('admin/login');
+    }
     public function showLoginForm()
     {
         return view('admin.login'); 

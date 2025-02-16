@@ -74,7 +74,7 @@ class EmployeesController extends Controller
          
    
      
-        return redirect()->route('admin.employees.add')->with('success', 'Employee added successfully.');
+        return redirect()->route('admin.employees');
     }
 
     public function viewEmployee($id)

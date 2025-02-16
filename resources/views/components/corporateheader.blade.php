@@ -432,7 +432,7 @@
 
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
 
-          <a class="navbar-brand brand-logo" href="{{ URL::to('admin/dashboard') }}">
+          <a class="navbar-brand brand-logo" href="{{ URL::to('/corporate/dashboard') }}">
 
             <img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo" />
 
@@ -496,7 +496,7 @@
 
             <li class="nav-item nav-logout d-none d-lg-block">
 
-              <a class="nav-link" href="{{ URL::to('/admin/logout') }}">
+              <a class="nav-link" href="{{ URL::to('/corporate/logout') }}">
                 <i class="mdi mdi-power"></i>
               </a>
 

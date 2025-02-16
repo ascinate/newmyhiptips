@@ -1,32 +1,32 @@
-<x-adminheader/>
-<!-- partial -->
-<x-adminsidebar/>
-<!-- partial -->
+<x-corporateheader/>
+      <!-- partial -->
+   <x-corporatesidebar/>
+
 <div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white me-2">
-                    <i class="mdi mdi-home"></i>
+                  <i class="mdi mdi-home"></i>
                 </span> Dashboard
-            </h3>
-            <nav aria-label="breadcrumb">
+              </h3>
+              <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                   <li class="breadcrumb-item active" aria-current="page">
                     <button type="button" class="btn btn-gradient-success btn-fw">Add Employee</button>
                   </li>
                 </ul>
               </nav>
-        </div>
-    
-        <div class="row">
+            </div>
+
+          <div class="row">
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add new employee</h4>
                     <p class="card-description"> Basic information </p>
 
-                   <form name="frm" action="{{ route('admin.employees.insert') }}" method="post" enctype="multipart/form-data">
+                   <form name="frm" action="{{ url('corporate/employee/insert') }}" method="post"  enctype="multipart/form-data">
                     @csrf
                       <div class="form-group">
                         <label for="exampleInputName1">First Name</label>
@@ -49,23 +49,13 @@
                       </div>
 
                      <div class="form-group">
-                        <label for="exampleInputName1">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputName1" placeholder="Password">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="exampleInputEmail3">Hotel Name</label>
-                        <select class="form-control" name="hotel_id" required>
-                          <option value="">--Select--</option>
-                          <?php foreach($hotels as $hotel) { ?>
-                            <option value="<?=$hotel->id?>"><?=$hotel->hotel_name?></option>
-                          <?php } ?>
-                        </select>
-                      </div>
+                      <label for="exampleInputName1">Password</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputName1" placeholder="Password">
+                    </div>
 
                       <div class="form-group">
                         <label for="exampleInputPassword4">Department</label>
-                        <select class="form-control" name="department">
+                        <select class="form-control" name="department" required>
                             <option value="">Select Department</option>
                                 <option value="Housekeeping">Housekeeping</option>
                                 <option value="Front Desk">Front Desk</option>
@@ -82,7 +72,7 @@
                         </select>
                       </div>
 
-                      <div class="form-group">
+                       <div class="form-group">
                         <label for="exampleInputName1">Profile Photo</label>
                         <input type="file" name="photo" class="form-control file-upload-info">
                       </div>
@@ -110,7 +100,5 @@
               </div>
 
           </div>
-          <x-adminfooter/>
-    </div>
-</div>
-
+          <!-- content-wrapper ends -->
+          <x-corporatefooter/>      
