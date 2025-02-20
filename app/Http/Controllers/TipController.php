@@ -84,7 +84,43 @@ class TipController extends Controller
     // Handle Tip Submission
     public function submitTip(Request $request)
     {
-      
+        $validated = $request->validate([
+            'mnRadioDefault' => 'required|string|in:employees-ts,departments-mj',
+            'employee' => 'required_if:mnRadioDefault,employees-ts|array|min:1',
+            'department' => 'required_if:mnRadioDefault,departments-mj|string',
+            'room' => 'required|string',
+            'lname' => 'required|string',
+            'tip' => 'required|numeric|min:1',
+            'custom_tip' => 'nullable|numeric|min:3',
+        ]);
+
+        $hotel_id = Session::get('hotel_id');
+        
+        // Calculate Final Tip Amount
+        $tip_amount = ($validated['tip'] === 'other') ? $validated['custom_tip'] : $validated['tip'];
+        $admin_commission = $tip_amount * 0.1; // Example: 10% commission
+        $final_amount = $tip_amount - $admin_commission;
+
+        // Prepare Tip Data
+        $tipData = [
+            'hotel' => $hotel_id,
+            'room_number' => $validated['room'],
+            'last_name' => $validated['lname'],
+            'tip_amount' => $tip_amount,
+            'final_amount' => $final_amount,
+            'employee' => isset($validated['employee']) ? implode(',', $validated['employee']) : null,
+            'department' => $validated['department'] ?? null,
+            'tip_type' => $validated['mnRadioDefault'],
+            'admin_commission' => $admin_commission,
+            'each_share' => isset($validated['employee']) ? ($final_amount / count($validated['employee'])) : $final_amount,
+            'date_of_tip' => now(),
+            'status' => 'Y', // Default status
+        ];
+
+        Session::put('tip_data', $tipData);
+        // dd($tipData);
+        // Save Tip Data
+        $tip = Tip::create($tipData);
 
         // Redirect to Payment Page with Tip Data
         return view('admin.pay');
