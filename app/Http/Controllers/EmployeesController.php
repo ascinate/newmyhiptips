@@ -71,8 +71,11 @@ class EmployeesController extends Controller
             'department' => $request->department,
             'photo' => $fileName,
         ]);
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
          
    
      

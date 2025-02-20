@@ -150,9 +150,14 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <x-corporatefooter/>
         </div>
      
+=======
+        </div>
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     </div>
  
 
@@ -160,3 +165,7 @@
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
 
+<<<<<<< HEAD
+=======
+<x-corporatefooter/>
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4

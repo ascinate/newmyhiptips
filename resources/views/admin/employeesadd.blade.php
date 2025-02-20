@@ -102,7 +102,11 @@
                         <input type="text" name="account_number" class="form-control" id="exampleInputName1" placeholder="Account number" required>
                       </div>-->
 
+<<<<<<< HEAD
                       <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+=======
+                      <button type="submit"  class="btn btn-gradient-primary me-2">Submit</button>
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                       <button type="button" onclick="javascript: history.go(-1);" class="btn btn-light">Cancel</button>
                     </form>
                   </div>

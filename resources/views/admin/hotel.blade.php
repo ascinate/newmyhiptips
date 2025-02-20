@@ -64,10 +64,14 @@
                                                     </a>
                                                 </td>
                                                 <td>
+<<<<<<< HEAD
                                                     <a href="{{ url('/?code='.$hotel->active_code) }}" 
                                                     target="_blank" 
                                                     id="hotel-link-{{ $hotel->id }}" 
                                                     onclick="storeHotelIdInSession({{ $hotel->id }})">
+=======
+                                                    <a href="{{ url('/?code='.$hotel->active_code) }}" target="_blank">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                                                         {{ url('/?code='.$hotel->active_code) }}
                                                     </a>
                                                 </td>
@@ -90,6 +94,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 
         <script>
         function storeHotelIdInSession(hotelId) {
@@ -115,6 +120,9 @@
         }
     </script>
     
+=======
+    </div>
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
     <!-- JavaScript for Delete Confirmation -->
     <script type="text/javascript">
@@ -124,5 +132,8 @@
             }
         }
     </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 <x-adminfooter/>    

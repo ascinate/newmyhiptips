@@ -17,7 +17,11 @@
             <div class="content-wrapper d-flex align-items-center auth">
                 <div class="row flex-grow">
                     <div class="col-lg-4 mx-auto">
+<<<<<<< HEAD
                         <div class="auth-form-light text-center p-5" id="login">
+=======
+                        <div class="auth-form-light text-center p-5">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                             <div class="brand-logo">
                             HIPTIPS EMPLOYEE PANEL
                             </div>
@@ -31,7 +35,15 @@
                             <form name="frm" action="{{ route('employee.login') }}" method="POST" class="pt-3">
                                 @csrf
                                 
+<<<<<<< HEAD
                         
+=======
+                                @if (session('msg'))
+                                    <div class="alert alert-danger">
+                                        {{ session('msg') }}
+                                    </div>
+                                @endif
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" required>
                                 </div>
@@ -51,6 +63,7 @@
                                 </div>
                             </form>
                         </div>
+<<<<<<< HEAD
                         <div class="auth-form-light text-center p-5" id="forgotpass" style="display: none;">
                         <div class="brand-logo"> HIPTIPS EMPLOYEE PANEL </div>
                         @if (session('msg'))
@@ -67,6 +80,8 @@
                         </div>
                        
                     </div>
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                     </div>
                 </div>
             </div>
@@ -80,6 +95,7 @@
     <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
     <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('assets/js/misc.js') }}"></script>
+<<<<<<< HEAD
     <script type="text/javascript">
       $(document).ready(function(){
 
@@ -120,3 +136,7 @@
     </script>
 </body>
 </html>
+=======
+</body>
+</html>
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4

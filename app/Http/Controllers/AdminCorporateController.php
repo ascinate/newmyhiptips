@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+<<<<<<< HEAD
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 // use App\Models\Admin;
 
 
@@ -59,6 +62,7 @@ class AdminCorporateController extends Controller
         }
     }
 
+<<<<<<< HEAD
     public function forgotPass(Request $request)
     {
         $email = $request->input('email');
@@ -166,6 +170,8 @@ class AdminCorporateController extends Controller
         }
     }
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     public function dashboard()
     {
         $hotelId = Session::get('cor_id');
@@ -267,6 +273,7 @@ class AdminCorporateController extends Controller
         return view('corporate.employees', $data);
     }
 
+<<<<<<< HEAD
    
     
     public function viewcorporate($id, Request $request)
@@ -310,6 +317,8 @@ class AdminCorporateController extends Controller
     }
     
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     public function add(){
        
            
@@ -362,6 +371,7 @@ class AdminCorporateController extends Controller
         return redirect('/corporate/employees');
     }
 
+<<<<<<< HEAD
     public function editcorporate($id){
         $employee = DB::table('employee_master')->where('id', $id)->first();
  
@@ -448,6 +458,8 @@ public function deletecorporate($id)
 }
 
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     public function logout()
     {
         Auth::logout();

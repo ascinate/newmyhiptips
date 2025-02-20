@@ -78,6 +78,7 @@
     <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('assets/js/misc.js') }}"></script>
     <script type="text/javascript">
+<<<<<<< HEAD
       $(document).ready(function(){
 
         $("#switch").click(function(){
@@ -115,6 +116,45 @@
         });
 
       });
+=======
+    //   $(document).ready(function(){
+
+    //     $("#switch").click(function(){
+
+    //       $("#login").hide();
+    //       $("#forgotpass").show();
+
+    //     });
+
+    //     $("#cancel").click(function(){
+
+    //       $("#login").show();
+    //       $("#forgotpass").hide();
+    //       location.reload();
+
+    //     });
+
+    //     $("#btnpass").click(function(){
+
+    //       var email = $("#email").val();
+
+    //       $.ajax({
+
+    //         url: "corporate/login/forgot_pass",
+    //         data: { email:email },
+    //         type: "POST",
+    //         success: function(data)
+    //         {
+    //             $("#txt").html(data);
+    //             $("#email").val('');
+    //         } 
+
+    //       });
+
+    //     });
+
+    //   });
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     </script>
 </body>
 </html>

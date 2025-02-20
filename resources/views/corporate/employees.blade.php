@@ -61,6 +61,7 @@
                                     <td>{{ $employee->phone }}</td>
                                     <td>{{ $employee->email }}</td>
                                     <td>
+<<<<<<< HEAD
                                         <a href="{{ url('/corporate/employees/view/'.$employee->id) }}">
                                             <i class="fa fa-eye" style="font-size: 24px;"></i>
                                         </a>
@@ -70,6 +71,17 @@
                                         </a>
                                         &nbsp;
                                         <a href="javascript: archive({{ $employee->id }});" >
+=======
+                                        <a href="#">
+                                            <i class="fa fa-eye" style="font-size: 24px;"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#">
+                                            <i class="fa fa-pencil" style="font-size: 24px;"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="javascript:void(0);" onclick="archive({{ $employee->id }});">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                                             <i class="fa fa-trash" style="font-size: 24px;"></i>
                                         </a>
                                     </td>
@@ -89,10 +101,18 @@
 <x-corporatefooter/>
 
 <script type="text/javascript">
+<<<<<<< HEAD
     function archive(corpId) {
         
         if (confirm("Are you sure to remove?")) {
             window.location.href = "{{ url('corporate/employees/delete') }}/" + corpId;
         }
     }
+=======
+    // function archive(id) {
+    //     if (confirm("Are you sure to remove?")) {
+    //         window.location.href = '{{ url('corporate/employees/delete') }}/' + id;
+    //     }
+    // }
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 </script>

@@ -54,6 +54,7 @@ class AdminEmployeeController extends Controller
         
     }
 
+<<<<<<< HEAD
     public function empforgotpass(Request $request)
     {
         $email = $request->input('email');
@@ -161,6 +162,8 @@ class AdminEmployeeController extends Controller
         }
     }
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
         public function tips(Request $request)
         {
             $corId = Session::get('hotel_id');

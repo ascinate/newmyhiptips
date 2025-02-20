@@ -18,6 +18,21 @@
 
     <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
 
+<<<<<<< HEAD
+=======
+    <!-- endinject -->
+
+    <!-- Plugin css for this page -->
+
+    <!-- End Plugin css for this page -->
+
+    <!-- inject:css -->
+
+    <!-- endinject -->
+
+    <!-- Layout styles -->
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -45,6 +60,7 @@
         }
 
 
+<<<<<<< HEAD
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before{
   content: "+" !important;
     height: 1em;
@@ -84,6 +100,9 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
     background-color: #0d6efd;
     position: absolute;
 }
+=======
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
         table.dataTable tbody tr.child td {
 
   word-break: break-word; word-break: break-all; white-space: normal;
@@ -488,6 +507,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
 
               <!-- <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
 
+<<<<<<< HEAD
                 <div class="nav-profile-img">
 
                   <img src="{{ asset('assets/images/faces/face1.jpg') }}" alt="image">
@@ -495,6 +515,15 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
                   <span class="availability-status online"></span>
 
                 </div>
+=======
+                <div class="nav-profile-img"> -->
+
+                  <!-- <img src="{{ asset('assets/images/faces/face1.jpg') }}" alt="image">
+
+                  <span class="availability-status online"></span> -->
+
+                <!-- </div>
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
                 <div class="nav-profile-text">
 
@@ -510,6 +539,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
 
             </li>
 
+<<<<<<< HEAD
             <!-- <li class="nav-item nav-logout d-none d-lg-block">
 
             <a class="nav-link" href="{{ URL::to('admin/editadmin') }}">
@@ -523,6 +553,21 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
             <li class="nav-item nav-logout d-none d-lg-block">
 
               <a class="nav-link" href="{{ url('admin/logout') }}">
+=======
+            <!-- <li class="nav-item nav-logout d-none d-lg-block"> -->
+
+            <!-- <a class="nav-link" href="{{ URL::to('admin/editadmin') }}">
+                <i class="mdi mdi-border-color"></i>
+              
+            </a> -->
+
+
+            <!-- </li> -->
+
+            <li class="nav-item nav-logout d-none d-lg-block">
+
+              <a class="nav-link" href="{{ URL::to('/admin/logout') }}">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                 <i class="mdi mdi-power"></i>
               </a>
 

@@ -53,11 +53,19 @@
 <script src="{{ asset('assets/js/chart.js') }}"></script>
 
 <!-- End custom js for this page -->
+<<<<<<< HEAD
 <!-- 
 
 <link rel="stylesheet" href="{{ asset('assets/css/dataTables.bootstrap5.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/responsive.bootstrap5.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/buttons.dataTables.min.css') }}"> -->
+=======
+
+
+<link rel="stylesheet" href="{{ asset('assets/css/dataTables.bootstrap5.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.bootstrap5.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/buttons.dataTables.min.css') }}">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 
 
@@ -112,6 +120,7 @@
         });
         $('#extable_dashboard').DataTable({
 
+<<<<<<< HEAD
             "pageLength": 25,
             responsive: true
             });
@@ -155,6 +164,16 @@
                 }
                ],
         });
+=======
+            "pageLength": 25
+            });
+
+        $('#extable3').DataTable({
+
+        "pageLength": 50
+        });
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
         $('#example2').dataTable({
 
             pageLength: 100,

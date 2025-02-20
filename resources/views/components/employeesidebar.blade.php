@@ -44,9 +44,15 @@
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
+<<<<<<< HEAD
            
             <li class="nav-item">
               <a class="nav-link" href="{{ url('/employee/tips') }}">
+=======
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
                 <span class="menu-title">View Tips</span>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </a>

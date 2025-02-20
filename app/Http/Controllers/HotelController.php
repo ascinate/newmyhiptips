@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Hotel;
 use App\Models\Tip;
 use Illuminate\Support\Facades\Session;
+=======
+use Illuminate\Http\Request;
+use App\Models\Hotel;
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 class HotelController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         $hotels = Hotel::where('is_active', 'Y')->orderBy('hotel_name')->get();
 
         // Check if there is at least one active hotel
@@ -20,6 +26,9 @@ class HotelController extends Controller
         }
 
         Session::get('hotel_name');
+=======
+        $hotels = Hotel::all();
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
         return view('admin.hotel', ['hotels' => $hotels]);
     }
 
@@ -31,6 +40,7 @@ class HotelController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
         'hotel_name' => 'required|string|max:255',
         'phone' => 'required|string|max:15',
         'contact_name' => 'required|string|max:255',
@@ -50,6 +60,24 @@ class HotelController extends Controller
 
         // Generate a unique activation code
         $uniqueCode = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'), 0, 10);
+=======
+            'hotel_name' => 'required|string|max:255',
+            'phone' => 'required|string|max:15',
+            'contact_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:hotel_master,email',
+            'password' => 'required|min:6',
+            'additional_email' => 'nullable|email|max:255',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'street' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'zipcode' => 'required|string|max:10',
+            'all_staff' => 'required|in:Y,N',
+            'is_department' => 'required|in:Y,N',
+            'is_commission' => 'required|in:Y,N',
+            'tripadvisor_link' => 'nullable|url|max:500',
+        ]);
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
         // Handle file upload
         if ($request->hasFile('photo')) {
@@ -75,7 +103,11 @@ class HotelController extends Controller
             'is_department' => $request->is_department,
             'is_commission' => $request->is_commission,
             'tripadvisor_link' => $request->tripadvisor_link,
+<<<<<<< HEAD
             'active_code' => $uniqueCode, // Store the activation code
+=======
+            'active_code' => '',
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
         ]);
 
         return redirect()->route('admin.hotel')->with('success', 'Hotel added successfully!');
@@ -145,6 +177,7 @@ class HotelController extends Controller
 
         return redirect()->route('admin.hotel')->with('success', 'Hotel updated successfully.');
     }
+<<<<<<< HEAD
 
     public function show($id)
     {
@@ -177,4 +210,6 @@ class HotelController extends Controller
         return redirect()->route('admin.hotel')->with('success', 'Hotel deleted successfully.');
     }
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 }

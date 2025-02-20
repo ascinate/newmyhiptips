@@ -5,19 +5,34 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 use App\Models\Admin;
+=======
+// use App\Models\Admin;
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 
 class AdminController extends Controller
 {
+<<<<<<< HEAD
+=======
+
+    public function adminlogin()
+    {
+        return redirect('admin/login');
+    }
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     public function showLoginForm()
     {
         return view('admin.login'); 
     }
+<<<<<<< HEAD
     public function adminlogout()
     {
         return redirect('admin/login');
     }
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
     public function login(Request $request)
     {
@@ -73,6 +88,10 @@ class AdminController extends Controller
     ));
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
     public function logout()
     {
         Auth::logout();

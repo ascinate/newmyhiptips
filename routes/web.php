@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+<<<<<<< HEAD
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\TippingController;
 use App\Http\Controllers\EmployeesController;
@@ -19,6 +20,13 @@ use App\Http\Controllers\PaymentController;
 
 
 use App\Http\Controllers\TipController;
+=======
+use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\CorporateController;
+use App\Http\Controllers\AdminCorporateController;
+use App\Http\Controllers\AdminEmployeeController;
+use App\Http\Controllers\HotelController;
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 
 Route::get('/', function () {
@@ -26,12 +34,21 @@ Route::get('/', function () {
 });
 
 
+<<<<<<< HEAD
+=======
+
+
+Route::get('/admin/logout', [AdminController::class, 'adminlogin']);
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 Route::view('admin/login','admin/login');
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminController::class, 'login']);
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+<<<<<<< HEAD
 Route::get('admin/logout', [AdminController::class, 'adminlogout']);
 
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 Route::get('/hotel', [HotelController::class, 'index'])->name('admin.hotel');
 Route::get('/hotels/create', [HotelController::class, 'create'])->name('hotels.create');
@@ -41,6 +58,7 @@ Route::get('/admin/hotels/{id}/edit', [HotelController::class, 'edit'])->name('h
 Route::post('/admin/hotels/update/{id}', [HotelController::class, 'update'])->name('hotels.update');
 Route::get('/admin/hotels/delete/{id}', [HotelController::class, 'destroy'])->name('hotels.destroy');
 
+<<<<<<< HEAD
 
 // Route::get('/', [TippingController::class, 'showForm']);
 // Route::post('/submit-tip', [TippingController::class, 'submitTip'])->name('submit.tip');
@@ -67,6 +85,10 @@ Route::post('/tip-payment', [TipController::class, 'processPayment'])->name('tip
 Route::get('admin/employees',[EmployeesController::class, 'index'])->name('admin.employees');
 
 
+=======
+Route::get('admin/employees',[EmployeesController::class, 'index'])->name('admin.employees');
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 Route::get('employees/add', [EmployeesController::class, 'add'])->name('admin.employees.add');
 Route::post('employees/insert', [EmployeesController::class, 'insertEmployee'])->name('admin.employees.insert');
 Route::get('/admin/employees/view/{id}', [EmployeesController::class, 'viewEmployee']);
@@ -86,7 +108,10 @@ Route::get('admin/corporate/delete/{id}', [CorporateController::class, 'delete']
 Route::get('/corporate/logout', [AdminCorporateController::class, 'corporatelogin']);
 Route::view('corporate/login','corporate/login');
 Route::get('/corporate/login', [AdminCorporateController::class, 'showLoginForm'])->name('corporate.login');
+<<<<<<< HEAD
 Route::post('corporate/login/forgot_pass', [AdminCorporateController::class, 'forgotpass']);
+=======
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 
 
 Route::post('/corporate/login', [AdminCorporateController::class, 'corporate'])->name('corporate.login');
@@ -101,12 +126,17 @@ Route::get('corporate/employees/add', [AdminCorporateController::class, 'add']);
 Route::post('corporate/employee/insert', [AdminCorporateController::class, 'insertCorporate']);
 
 Route::get('/employee/login', [AdminEmployeeController::class, 'employee']);
+<<<<<<< HEAD
 Route::post('/employee/login', [AdminEmployeeController::class, 'login'])->name('employee.login');
 Route::post('/employee/login/forgot_pass', [AdminEmployeeController::class, 'empforgotpass']);
+=======
+Route::post('/corporate/login', [AdminEmployeeController::class, 'login'])->name('employee.login');
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
 Route::get('/employee/dashboard',[AdminEmployeeController::class, 'dashboard'])->name('employee.dashboard');
 Route::get('/employee/logout', [AdminEmployeeController::class, 'employeelogin']);
 Route::get('/employee/edit', [AdminEmployeeController::class, 'employeeedit']);
 Route::post('employee/update_profile', [AdminEmployeeController::class, 'updateProfile']);
+<<<<<<< HEAD
 Route::get('/employee/tips', [AdminTipsController::class, 'index'])->name('employee.tips');
 
 
@@ -127,3 +157,9 @@ Route::get('/corporate/tips', [TipsCorporateController::class, 'index'])->name('
 // Route::get('/corporate/tips', [TipsCorporateController::class, 'indexTypeTwo'])->name('tips.filter');
 Route::any('/corporate/tips/search', [TipsCorporateController::class, 'tips'])->name('corporate.tips.search');
 Route::any('/corporate/tips/total', [TipsCorporateController::class, 'total'])->name('corporate.tips.total');
+=======
+
+
+
+
+>>>>>>> 3cfd0cbfcea102ba6acb4566e9985853e8920fe4
